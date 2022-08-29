@@ -1,0 +1,1095 @@
+/*
+1- Common CSS Styles
+2- General Css Styles
+3- Sections
+    3.0 Header section
+    3.1 Home Section
+    3.2 About section
+    3.3 Portfolio Section
+    3.4 Service Section
+    3.5 Prices Section
+    3.6 Team Section
+    3.7 Blog Section
+    3.8 Contact section
+    3.9 footer section
+ */
+
+
+/* 1-Common CSS Styles */
+/* 
+-container
+-opacity hover
+-section header 
+-section padding
+-hover effect 1(left to right )
+-hover effect 2(right to left )
+*/
+
+/* 2- General Css Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+button {
+    font-family: 'Varela Round', sans-serif;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+
+body {
+    font-family: 'Varela Round', sans-serif;
+}
+
+.section-header {
+    text-align: center;
+}
+
+.section-header .section-titel {
+    font-size: 35px;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+}
+
+.section-header .section-line {
+    display: block;
+    margin: 0 auto 70px auto;
+    height: 3px;
+    background-color: #6195ff;
+    width: 60px;
+}
+
+.pd-y {
+    padding: 120px 0;
+}
+
+.clear {
+    clear: both;
+}
+
+a {
+    text-decoration: none;
+
+}
+
+.ltr-effect {
+    position: relative;
+}
+
+.ltr-effect::after {
+    position: absolute;
+    content: "";
+    width: 0%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #333;
+    z-index: -1;
+    transition: width 0.5s;
+
+
+}
+
+.ltr-effect:hover::after {
+    width: 100%;
+}
+
+
+.ttb-effect {
+    position: relative;
+}
+
+.ttb-effect::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #333;
+    z-index: -1;
+    transition: height 0.5s;
+
+
+}
+
+.ttb-effect:hover::after {
+    height: 100%;
+}
+
+.mg {
+    margin: 0 5%;
+}
+
+.praicing-titel {
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #6e6e6e;
+
+}
+
+
+
+/* Ends General Css Styles */
+
+/* 3- Sections */
+/*  3.0 Header section */
+
+.header {
+
+    position: fixed;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+
+.header-content {
+    overflow: hidden;
+}
+
+.header .logo {
+    width: 40%;
+    float: left;
+
+}
+
+.header .logo img {
+    width: 20%;
+    margin-top: -3px;
+}
+
+
+
+.header .navbar {
+    width: 60%;
+    float: left;
+    list-style: none;
+}
+
+.header .navbar li {
+    display: inline-block;
+
+}
+
+.header .navbar li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 12px;
+    font-size: 14px;
+}
+
+.header .navbar li a.active::after,
+.header .navbar li a::after {
+    content: "";
+    display: block;
+    height: 3px;
+    background-color: #6195ff;
+    transition: width 0.5s;
+}
+
+.header .navbar li a.active::after {
+    width: 100%;
+}
+
+.header .navbar li a::after {
+    width: 0;
+}
+
+.header .navbar li a:hover::after {
+    width: 100%;
+}
+
+
+
+/* End Header section */
+
+/* 3.1 Start Home Section */
+.home {
+    height: 100vh;
+    background-image: url(../images/background/background2.jpg);
+    background-size: cover;
+    position: relative;
+    background-attachment: fixed;
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.home-content {
+    width: 65%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.home-title {
+    color: white;
+    font-size: 55px;
+    text-transform: uppercase;
+}
+
+.home-dec {
+    color: white;
+    margin: 20px 0;
+    letter-spacing: 2px;
+    line-height: 1.5;
+}
+
+.btn {
+    width: 160px;
+    padding: 15px 0;
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+    font-size: 15px;
+
+}
+
+.home .btn-start {
+    margin-right: 10px;
+    background-color: #fff;
+}
+
+.home .btn-learn {
+    background-color: #6195ff;
+    color: white;
+}
+
+.hover-op {
+    transition: 0.7s;
+}
+
+.hover-op:hover {
+    opacity: 0.7;
+}
+
+/* 3.1 End Home Section */
+
+/* 3.2 About section */
+
+.about-content {
+    overflow: hidden;
+}
+
+.about-item {
+    float: left;
+    width: 30%;
+    border: 1px solid #e8e8e8;
+    text-align: center;
+    padding: 30px 20px;
+
+}
+
+.about-item:hover .about-item-titel {
+    color: white;
+
+}
+
+.about-item.mg {
+    margin: 0 5%;
+}
+
+.about-item .icon {
+    color: #6195ff;
+    margin-bottom: 10px;
+}
+
+.about-item-titel {
+    text-transform: capitalize;
+    margin-bottom: 10px;
+
+    transition: 0.5s;
+
+}
+
+.about-item-dec {
+    line-height: 1.6;
+    margin-bottom: 10px;
+    color: #6e6e6e;
+}
+
+.about-item-link {
+    color: #6195ff;
+    text-transform: capitalize;
+
+}
+
+/* 3.3 Portfolio Section */
+.portfolio {
+    background-color: #f9f9f9;
+}
+
+.portfolio-content {
+    overflow: hidden;
+}
+
+.portfolio-item {
+    width: 30%;
+    float: left;
+    margin-bottom: 5px;
+    position: relative;
+}
+
+
+
+.portfolio-item .layer-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #333;
+}
+
+.portfolio-item img {
+    width: 100%;
+}
+
+.portfolio-item.mg {
+    margin: 0 5%;
+}
+
+
+/* 3.4 offer Section */
+.offer {}
+
+.offer-item {
+    width: 30%;
+    float: left;
+    margin: 20px 0;
+    border: solid 1px #e8e8e8;
+    padding: 20px 15px 30px 70px;
+    position: relative;
+}
+
+.offer-content {
+    overflow: hidden;
+}
+
+.offer-item.mg {
+    margin: 17px 5%;
+}
+
+.offer-item .icon {
+    position: absolute;
+    left: 30px;
+    top: 25px;
+    color: #6195ff;
+}
+
+.offer-item-titel {
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    font-size: 23px;
+    transition: 0.5s;
+}
+
+.offer-item:hover .offer-item-titel .offer-item-dec {
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    line-height: 1.6;
+    color: #6e6e6e;
+}
+
+.offer-item .icon.y {
+    left: 25px;
+    top: 19px;
+}
+
+.offer-item:hover .offer-item-titel {
+    color: white;
+
+}
+
+
+/* service section  */
+.service {
+    background-color: #f9f9f9;
+}
+
+.service-item {
+    float: left;
+    width: 50%;
+}
+
+.service-item .section-header {
+    text-align: left;
+}
+
+.service-item .section-header .section-line {
+    display: block;
+    margin: 0 0 30px 0;
+    height: 3px;
+    background-color: #6195ff;
+    width: 60px;
+}
+
+.section-titel {
+    text-transform: capitalize;
+    transition: 0.5s;
+}
+
+.section-titel:hover {
+    font-size: 40px;
+}
+
+.service-item-dec {
+    color: #6e6e6e;
+    line-height: 1.4;
+    padding-right: 20px;
+    margin-bottom: 17px;
+    font-size: 17px;
+}
+
+.service-list {
+    list-style: none;
+}
+
+.service-list li {
+    margin-bottom: 10px;
+    color: #6e6e6e;
+}
+
+.service-list li i {
+    border: 1px solid #6195ff;
+    color: #6195ff;
+    border-radius: 50%;
+    padding: 11px 4px;
+    transition: 0.5s;
+}
+
+.service-list li i:hover {
+    background-color: #6e6e6e;
+    border-color: #6e6e6e;
+    color: white;
+}
+
+
+
+.service-item-img {
+    width: 100%;
+}
+
+.service-boltt {
+    list-style: none;
+    text-align: center;
+}
+
+.service-boltt li {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    background-color: #e8e8e8;
+    margin: 10px 5px;
+    border-radius: 50%;
+    transition: .5s;
+}
+
+.service-boltt li.aa {
+    background-color: #6195ff;
+
+}
+
+.service-boltt li:hover {
+    width: 38px;
+    background-color: #6195ff;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+}
+
+
+/* numbers section */
+.number {
+    position: relative;
+    background-image: url(../images/background/background2.webp);
+    background-size: cover;
+    background-attachment: fixed;
+    height: 312px;
+}
+
+.number-items {
+    overflow: hidden;
+    padding: 125px 0 0 0;
+}
+
+.number-item {
+    width: 25%;
+    float: left;
+    text-align: center;
+    text-transform: capitalize;
+
+}
+
+.number-item .icon {
+    color: #6195ff;
+    margin-bottom: 15px;
+    transition: 0.5s;
+}
+
+.number-item-titel {
+    font-weight: bold;
+    font-size: 27px;
+    margin-bottom: 1px;
+    color: white;
+    transition: 0.5s;
+}
+
+.number-item:hover .number-item-titel {
+    color: #6195ff;
+    font-size: 30px;
+    padding: 5px 0;
+}
+
+.number-item-dec {
+    color: white;
+    transition: 0.5s;
+}
+
+.number-item:hover .icon {
+    font-size: 38px;
+}
+
+
+.number-item:hover .number-item-dec {
+    color: #6195ff;
+    font-size: 20px;
+
+
+}
+
+
+
+
+/* 3.5 Prices Section */
+.pricea {}
+
+
+.praicing-plans {
+    overflow: hidden;
+
+}
+
+.praicing-item {}
+
+.praicing-titel {
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #6e6e6e;
+    transition: 0.5s;
+}
+
+.praicing-item-per {
+    width: 132px;
+    height: 132px;
+    padding: 40px;
+    margin: 20px auto;
+    border: 3px solid #6195ff;
+    border-radius: 50%;
+    position: relative;
+    transition: 0.5s;
+}
+
+.praicing-item:hover .praicing-item-per {
+    width: 150px;
+    height: 150px;
+    padding: 40px;
+    margin: 20px auto;
+    border: 3px solid #6195ff;
+    border-radius: 50%;
+    position: relative;
+}
+
+
+.praicing-item-per .doller {
+    font-size: 36px;
+    position: absolute;
+    text-align: center;
+    top: 25px;
+    left: 31px;
+    transition: 0.5s;
+}
+
+.praicing-item:hover .praicing-item-per .doller {
+    font-size: 40px;
+    position: absolute;
+    text-align: center;
+    top: 35px;
+    left: 39px;
+    transition: 0.5s;
+
+}
+
+.praicing-item:hover .praicing-item-per .month {
+    position: absolute;
+    font-size: 26px;
+    text-align: center;
+    left: 22px;
+    top: 82px;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+
+.praicing-item-per .dollera {
+    font-size: 36px;
+    position: absolute;
+    text-align: center;
+    top: 25px;
+    left: 43px;
+    transition: 0.5s;
+}
+
+.praicing-item:hover .praicing-item-per .dollera {
+    font-size: 45px;
+    position: absolute;
+    text-align: center;
+    top: 27px;
+    left: 46px;
+}
+
+
+.praicing-item-per .month {
+    position: absolute;
+    font-size: 20px;
+    text-align: center;
+    left: 26px;
+    top: 72px;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+
+.praicing-item-list {
+    list-style: none;
+    margin: 10px 0;
+}
+
+
+.praicing-item-list li {
+    margin: 7px 0;
+    text-transform: capitalize;
+    color: #6e6e6e;
+}
+
+.praicing-item {
+    width: 30%;
+    float: left;
+    padding: 20px 15px;
+    border: 1px solid #e8e8e8;
+    text-align: center;
+}
+
+
+.praicing-item-button {
+    background: none;
+    border: 2px solid #6195ff;
+    display: block;
+    width: 120px;
+    color: #6195ff;
+    padding: 10px;
+    margin: 19px auto 0 auto;
+    font-size: 13px;
+    transition: 0.5s;
+}
+
+.praicing-item:hover .praicing-item-button {
+    width: 125px;
+    font-size: 15px;
+    color: white;
+    font-weight: bold;
+}
+
+.praicing-item:hover .praicing-titel {
+    color: #6195ff;
+
+}
+
+.praicing-item:hover .praicing-item-per {
+    color: #e8e8e8;
+}
+
+/* owner section */
+.owner {
+    background-image: url(../images/background/background3.webp);
+    background-size: cover;
+    background-attachment: fixed;
+    height: 370px;
+}
+
+.owner-content {
+    overflow: hidden;
+    padding: 120px 0;
+}
+
+.owner-item {
+    float: left;
+    width: 50%;
+    color: white;
+}
+
+.owner-item .top-owner {
+    padding: 10px 4px 20px 85px;
+    position: relative;
+}
+
+.top-img img {
+    width: 70px;
+    height: 70px;
+    transition: 0.5s;
+}
+
+
+.owner-item-dec {}
+
+.owner-item .top-owner img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 50%;
+}
+
+.owner-item .top-owner h3 {
+    margin-bottom: 7px;
+    text-transform: capitalize;
+    transition: 0.5s;
+}
+
+.owner-item .top-owner span {
+    color: #6195ff;
+    text-transform: capitalize;
+    transition: 0.5s;
+}
+
+.owner-item-dec {
+    line-height: 1.7;
+    font-size: 17px;
+    transition: 0.5s;
+}
+
+.owner-item:hover .top-owner h3 {
+    font-size: 30px;
+    padding-left: 22px;
+}
+
+.owner-item:hover .top-owner span {
+    font-size: 25px;
+    padding-left: 22px;
+}
+
+.owner-item:hover .owner-item-dec {
+    font-size: 18px;
+}
+
+.owner-item:hover .top-img img {
+    height: 100px;
+    width: 100px;
+}
+
+
+
+
+
+/* 3.6 Team Section */
+
+.team-content {
+    overflow: hidden;
+}
+
+
+.team-item {
+    float: left;
+    width: 30%;
+    padding: 40px 10px;
+    background-color: #e8e8e8;
+    text-align: center;
+}
+
+.team-item .team-img {
+    width: 90%;
+    margin: auto;
+    position: relative;
+}
+
+.team-img img {
+    width: 100%;
+    height: 315px;
+}
+
+.team-overlay {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+}
+
+.team-info .team-info-titel {
+    color: #222;
+    text-transform: capitalize;
+    margin: 10px 0;
+    transition: 0.5s;
+}
+
+.team-info .team-info-dec {
+    color: #6e6e6e;
+    text-transform: uppercase;
+    font-size: 15px;
+    transition: 0.5s;
+}
+
+.team-item a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: #7ba7ff;
+    color: white;
+    margin-left: auto;
+}
+
+.team-item i {
+    line-height: 40px;
+}
+
+.team-item:hover .team-overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+.team-item.ttb-effect {
+    z-index: 1;
+}
+
+.team-item:hover .team-info-titel {
+    color: white;
+    font-size: 21px;
+}
+
+.team-item:hover .team-info-dec {
+    color: #6195ff;
+    font-size: 18px;
+}
+
+/* 3.7 Blog Section */
+.blog {
+    background-color: #f9f9f9;
+}
+
+.blog-content {
+    overflow: hidden;
+}
+
+.blog-item {
+    width: 30%;
+    float: left;
+    background-color: white;
+    z-index: 1;
+}
+
+.blog-overlay {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+}
+
+.blog-item-img {
+    position: relative;
+}
+
+.blog-item:hover .blog-overlay {
+    visibility: visible;
+    opacity: 1;
+}
+
+.blog-item .mg:hover .blog-overlay {
+    visibility: visible;
+    opacity: 1;
+}
+
+.blog-item-img img {
+    width: 100%;
+}
+
+.blog-item-list {
+    list-style: none;
+    margin: 10px 0;
+
+}
+
+.blog-item-list li {
+    display: inline-block;
+    margin: 0 5px;
+    font-size: 14px;
+    transition: 0.5s;
+}
+
+.blog-item-list li i {
+    color: #6195ff;
+}
+
+.blog-info {
+    padding: 15px 20px;
+}
+
+.blog-item-titel {
+    margin: 20px 0;
+    transition: 0.5s;
+}
+
+.blog-item-dec {
+    line-height: 1.4;
+    color: #6e6e6e;
+    margin: 10px 0;
+}
+
+.blog-link {
+    color: #6195ff;
+    text-transform: capitalize;
+    transition: 0.5s;
+
+}
+
+.blog-item:hover .blog-item-titel {
+    color: white;
+}
+
+.blog-item:hover .blog-item-list li {
+    color: white;
+}
+
+.blog-link:hover {
+    font-size: 18px;
+}
+
+/* 3.8 Contact section */
+
+.cont-content {
+    overflow: hidden;
+}
+
+.cont-item {
+    float: left;
+    width: 30%;
+    text-align: center;
+    z-index: 1;
+
+}
+
+.icon {
+    margin: 10px 0;
+    color: #6195ff;
+    transition: 0.5s;
+}
+
+.cont-titel {
+    font-size: 21px;
+    margin: 20px;
+    text-transform: capitalize;
+    transition: 0.5s;
+}
+
+.cont-dec {
+    text-transform: capitalize;
+    color: #6e6e6e;
+    transition: 0.5s;
+}
+
+.cont-item:hover .icon {
+
+    font-size: 25px;
+}
+
+.cont-item:hover .cont-titel {
+    font-size: 23px;
+}
+
+.cont-item:hover .cont-dec {
+    font-size: 20Fpx;
+}
+
+
+
+/* 3.9 footer section */
+.footer {
+    background-color: #1c1d21;
+    text-align: center;
+    padding: 60px 0;
+}
+
+.footer-link {
+    list-style: none;
+    margin: 15px 10px;
+
+}
+
+.footer-link li {
+    display: inline-block;
+    margin: 0 4px;
+}
+
+.footer-link li a {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: #6195ff;
+    color: white;
+    border-radius: 50%;
+}
+
+.footer-link li a i {
+    width: 50px;
+    line-height: 50px;
+    font-size: 20px;
+
+
+}
+
+.footer-dec {
+    text-transform: uppercase;
+    color: #999;
+    font-size: 14px;
+    margin-top: 35px;
+}
+
+/*                      
+       
+      */
